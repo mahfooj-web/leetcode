@@ -13,7 +13,9 @@ public:
             // which means this digit becomes 0 and we carry 1 over to the next digit
             digits[i] = 0;
         }
-        digits.insert(digits.begin(), 1);
+
+        // Every digit was 9 (e.g 999 -> 1000): prepend a new leading 1
+        digits.insert(digits.begin(), 1);  // works because digits is a vector, has .insert() and .begin()
         return digits;
     }
 };
