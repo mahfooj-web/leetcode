@@ -19,3 +19,14 @@ public:
         return ret;  
     }
 };
+// if numRows == 1, return s (no zigzag possible)
+// make min(numRows, s.size()) strings, one per row
+// Walk through s. Append each char to rwos[curRow]
+// when curRow hit row 0 or the last row, flop the directon (goingDown = !goingDown)
+// Move curRow by +1 or -1
+// Concatenate all rows
+
+
+/// complexity 
+// time: O(n), one pass plus one join
+// space: O(n) for the row strings
